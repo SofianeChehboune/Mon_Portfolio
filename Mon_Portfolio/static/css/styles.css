@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    background: #007bff;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+footer {
+    margin-top: 20px;
+    background: #f4f4f4;
+    padding: 10px;
+}
+
+.flash-messages {
+    color: green;
+    font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css2?family=Grain&display=swap');
+
+body {
+    font-family: 'Grain', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+nav {
+    background-color: #333;
+    padding: 20px; /* Agrandissement de la barre de navigation */
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-links a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.social-links a:hover {
+    color: #1db954; /* Vert pour un effet au survol */
+}
+

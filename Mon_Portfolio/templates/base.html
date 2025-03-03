@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Accueil</a> | 
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+        {% block content %}
+            <h1>Bienvenue sur mon Portfolio</h1>
+
+            <!-- 📊 Graphique interactif Plotly -->
+            <h2>Graphique Interactif Plotly</h2>
+            <div>{{ plotly_graph | safe }}</div>
+
+            <!-- 📊 Scatter plot Matplotlib -->
+            <h2>Scatter Plot Matplotlib</h2>
+            <img src="{{ scatter_path }}" alt="Scatter Plot" width="500">
+
+            <!-- 📊 Bar plot Matplotlib -->
+            <h2>Bar Plot Matplotlib</h2>
+            <img src="{{ bar_path }}" alt="Bar Plot" width="500">
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Contact : 
+            <a href="mailto:chehbounesofiane@gmail.com">chehbounesofiane@gmail.com</a> | 
+            <a href="tel:+213779282240">+213 779 282 240</a>
+        </p>
+        <p>Retrouvez-moi sur :</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sofiane-chehboune-5b243766/" target="_blank">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" width="30">
+                LinkedIn
+            </a>
+            <a href="https://www.kaggle.com/" target="_blank">
+                <img src="{{ url_for('static', filename='images/kaggle.png') }}" alt="Kaggle" width="30">
+                Kaggle
+            </a>
+            <a href="https://www.upwork.com/freelancers/~0107eb9f01faeb1d82" target="_blank">
+                <img src="{{ url_for('static', filename='images/upwork.png') }}" alt="Upwork" width="30">
+                Upwork
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

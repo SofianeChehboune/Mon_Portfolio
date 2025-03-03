@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Accueil</a> | 
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Contactez-moi</h1>
+
+        <!-- Afficher les messages flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="/send-message" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>📧 <a href="mailto:chehbounesofiane@gmail.com">chehbounesofiane@gmail.com</a></p>
+        <p>📞 <a href="tel:+213779282240">+213 779 282 240</a></p>
+    </footer>
+</body>
+</html>

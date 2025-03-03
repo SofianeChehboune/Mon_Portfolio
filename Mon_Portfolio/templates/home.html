@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <a href="/">Accueil</a> | 
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Bienvenue sur mon Portfolio</h1>
+
+        <!-- 📊 Graphique interactif Plotly -->
+        <h2>Graphique Interactif Plotly</h2>
+        <div>{{ plotly_graph | safe }}</div>
+
+        <!-- 📊 Scatter plot Matplotlib -->
+        <h2>Scatter Plot Matplotlib</h2>
+        <img src="{{ scatter_path }}" alt="Scatter Plot" width="500">
+
+        <!-- 📊 Bar plot Matplotlib -->
+        <h2>Bar Plot Matplotlib</h2>
+        <img src="{{ bar_path }}" alt="Bar Plot" width="500">
+
+        <!-- 🚀 Machine Learning -->
+        <section id="machine-learning">
+            <h2>🚀 Machine Learning & Data Science</h2>
+            <p>Je travaille sur des modèles de Machine Learning pour analyser des données et obtenir des insights.</p>
+            <p>Exploration des algorithmes comme :</p>
+            <ul>
+                <li>🔍 Régression Logistique</li>
+                <li>🌳 Random Forest</li>
+                <li>🧠 Réseaux de Neurones</li>
+                <li>🎲 Monte Carlo Tree Search</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>📧 <a href="mailto:chehbounesofiane@gmail.com">chehbounesofiane@gmail.com</a></p>
+        <p>📞 <a href="tel:+213779282240">+213 779 282 240</a></p>
+        <p>Retrouvez-moi sur :</p>
+        <p>
+            <a href="https://www.linkedin.com/in/sofiane-chehboune-5b243766/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a> |
+            <a href="https://www.kaggle.com/" target="_blank">
+                <i class="fa-brands fa-kaggle"></i> Kaggle
+            </a> |
+            <a href="https://www.upwork.com/freelancers/~0107eb9f01faeb1d82" target="_blank">
+                <i class="fa-brands fa-upwork"></i> Upwork
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
