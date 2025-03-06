@@ -9,31 +9,43 @@
 </head>
 <body>
     <nav>
-        <a href="/">Accueil</a> | 
-        <a href="/contact">Contact</a>
+        <div class="nav-left">
+            <img src="{{ url_for('static', filename='images/id.jpg') }}" alt="Ma Photo" class="logo-photo">
+        </div>
+        <div class="nav-right">
+            <a href="/">Accueil</a> | 
+            <a href="/contact">Contact</a>
+            <!-- Sélecteur de langue -->
+            <button id="theme-toggle">Mode Sombre/Clair</button>
+            <select id="language-select">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
     </nav>
-
-    <main>
-        <h1>Bienvenue sur mon Portfolio</h1>
-
-        <!-- 📊 Graphique interactif Plotly -->
-        <h2>Graphique Interactif Plotly</h2>
-        <div>{{ plotly_graph | safe }}</div>
-
-        <!-- 📊 Scatter plot Matplotlib -->
-        <h2>Scatter Plot Matplotlib</h2>
-        <img src="{{ scatter_path }}" alt="Scatter Plot" width="500">
-
-        <!-- 📊 Bar plot Matplotlib -->
-        <h2>Bar Plot Matplotlib</h2>
-        <img src="{{ bar_path }}" alt="Bar Plot" width="500">
-
-        <!-- 🚀 Machine Learning -->
-        <section id="machine-learning">
-            <h2>🚀 Machine Learning & Data Science</h2>
-            <p>Je travaille sur des modèles de Machine Learning pour analyser des données et obtenir des insights.</p>
-            <p>Exploration des algorithmes comme :</p>
-            <ul>
+    
+    <main style="background: rgba(0, 0, 0, 0.6); padding: 40px; margin: 20px auto; max-width: 80%; border-radius: 10px; color: white;">
+        <h1 class="fade-in" style="font-size: 2.5em; margin-bottom: 20px;">Bienvenue sur mon site</h1>
+        
+        <!-- Graphique interactif Plotly -->
+        <h2 style="font-size: 2em; margin-bottom: 10px;">Graphique Interactif Plotly</h2>
+        <div class="fade-in" style="margin-bottom: 30px;">{{ plotly_graph | safe }}</div>
+        
+        <!-- Scatter plot Matplotlib -->
+        <h2 style="font-size: 2em; margin-bottom: 10px;">Scatter Plot Matplotlib</h2>
+        <img src="{{ scatter_path }}" alt="Scatter Plot" class="hover-effect" width="500" style="max-width: 100%; height: auto; margin-bottom: 30px;">
+        
+        <!-- Bar plot Matplotlib -->
+        <h2 style="font-size: 2em; margin-bottom: 10px;">Bar Plot Matplotlib</h2>
+        <img src="{{ bar_path }}" alt="Bar Plot" class="hover-effect" width="500" style="max-width: 100%; height: auto; margin-bottom: 30px;">
+        
+        <!-- Section Machine Learning & Data Science -->
+        <section id="machine-learning" style="margin-top: 40px; text-align: left; display: inline-block; width: 100%;">
+            <h2 style="font-size: 2em; margin-bottom: 15px;">🚀 Machine Learning & Data Science</h2>
+            <p style="font-size: 1.2em;">Je travaille sur des modèles de Machine Learning pour analyser des données et obtenir des insights.</p>
+            <p style="font-size: 1.2em;">Exploration des algorithmes comme :</p>
+            <ul style="font-size: 1.2em; margin: 0 auto; max-width: 600px; text-align: left; padding-left: 20px;">
                 <li>🔍 Régression Logistique</li>
                 <li>🌳 Random Forest</li>
                 <li>🧠 Réseaux de Neurones</li>
@@ -41,21 +53,140 @@
             </ul>
         </section>
     </main>
+        <section id="about">
+            <div class="container">
+                <h2>À propos de moi</h2>
+                <p><p>
+                    Je suis <strong>Sofiane Chehboune</strong>, un passionné de l'analyse de données et du Machine Learning. 
+                    Avec une solide expérience en <strong>traitement des données, modélisation statistique et visualisation</strong>, 
+                    j’aime transformer les données brutes en <strong>informations exploitables</strong> pour faciliter la prise de décision.
+                </p>
+                <p>
+                    Spécialisé en <strong>Python</strong>, j'utilise des bibliothèques comme <em>Pandas, Scikit-learn, Seaborn, PyGWalker et Plotly</em> 
+                    pour explorer et analyser les données de manière efficace. Mon expertise couvre également 
+                    <strong>l'implémentation de modèles de Machine Learning, l’optimisation des hyperparamètres</strong> et la création 
+                    d'applications interactives avec <strong>Streamlit</strong> pour présenter des résultats clairs et impactants.
+                </p>
+                <p>
+                    Toujours curieux et en quête de nouveaux défis, je partage mes connaissances à travers des 
+                    <strong>contenus pédagogiques et des projets concrets</strong> sur <a href="https://www.linkedin.com/in/sofiane-chehboune-5b243766/" target="_blank">LinkedIn</a> et 
+                    <a href="https://www.instagram.com/MLDataAnalyst" target="_blank">Instagram</a>. Mon objectif ? 
+                    <strong>Apporter des solutions innovantes grâce à la data science et aider les entreprises à tirer le meilleur parti de leurs données.</strong>
+                </p>
+            
+                <h3>🎓 Formations & Certifications</h3>
+                <ul>
+                    <li><strong>Décembre 2024</strong> – Data Analysis with Python (<em>FreeCodeCamp</em>)<br>
+                        ➡️ <em>Certification : Data Analysis with Python</em></li>
+                    <li><strong>Août 2024</strong> (En cours d'obtention) – Certification Microsoft Power BI</li>
+                    <li><strong>Avril 2024</strong> – Data Science et Machine Learning | MasterClass Python (<em>Udemy</em>)<br>
+                        ➡️ <em>Certification : Python ML (Machine Learning) - 14/04/2024</em></li>
+                    <li><strong>Avril 2023</strong> – Analyse et Visualisation de données avec Python (<em>Matplotlib, Seaborn, Numpy, Pandas</em>) (<em>Jovian</em>)<br>
+                        ➡️ <em>Certification : Certificat Jovian - 16/10/2023</em></li>
+                </ul>
+                <a href="static/cv.pdf" download class="btn">Télécharger mon CV</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 style="color: rgb(9, 9, 121);">Mes Projets</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Projet 1</h3>
+                        <p style="color: black;">Analyse de fraudes bancaires avec scikit-learn.</p>
+                        <a href="lien_du_projet" target="_blank">Voir le projet</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projet 2</h3>
+                        <p style="color: black;">Dashboard interactif de gestion de production.</p>
+
+                        <a href="lien_du_projet" target="_blank">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <section id="python-logos">
+        <h2 style="font-size: 2em; margin-bottom: 10px;">Bibliothèques Python</h2>
+        <div id="logo-container"></div>
+      </section>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function(){
+          const logos = [
+            {
+              src: "{{ url_for('static', filename='images/pandas.png') }}",
+              alt: "Pandas",
+              link: "https://pandas.pydata.org/"
+            },
+            {
+              src: "{{ url_for('static', filename='images/numpy.png') }}",
+              alt: "NumPy",
+              link: "https://numpy.org/"
+            },
+            {
+              src: "{{ url_for('static', filename='images/matplotlib.png') }}",
+              alt: "Matplotlib",
+              link: "https://matplotlib.org/"
+            },
+            {
+              src: "{{ url_for('static', filename='images/seaborn.png') }}",
+              alt: "Seaborn",
+              link: "https://seaborn.pydata.org/"
+            },
+            {
+              src: "{{ url_for('static', filename='images/scikit-learn.png') }}",
+              alt: "Scikit-learn",
+              link: "https://scikit-learn.org/stable/"
+            }
+          ];
+      
+          // Mélanger l'ordre des logos (algorithme de Fisher-Yates)
+          for (let i = logos.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [logos[i], logos[j]] = [logos[j], logos[i]];
+          }
+      
+          // Ajouter les logos dans le conteneur
+          const container = document.getElementById("logo-container");
+          logos.forEach(logo => {
+            const a = document.createElement("a");
+            a.href = logo.link;
+            a.target = "_blank";
+            const img = document.createElement("img");
+            img.src = logo.src;
+            img.alt = logo.alt;
+            img.style.width = "110px";   // Ajuste la taille selon tes besoins
+            img.style.margin = "25px";
+            a.appendChild(img);
+            container.appendChild(a);
+          });
+        });
+      </script>    
 
     <footer>
-        <p>📧 <a href="mailto:chehbounesofiane@gmail.com">chehbounesofiane@gmail.com</a></p>
-        <p>📞 <a href="tel:+213779282240">+213 779 282 240</a></p>
+        <p>📧 <a href="mailto:chehbounesofiane@gmail.com" style="color: white;">chehbounesofiane@gmail.com</a></p>
+        <p>📞 <a href="tel:+213779282240"style="color: white;">+213 779 282 240</a></p>
         <p>Retrouvez-moi sur :</p>
         <p>
-            <a href="https://www.linkedin.com/in/sofiane-chehboune-5b243766/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            <a href="https://www.linkedin.com/in/sofiane-chehboune-5b243766/" target="blank">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" class="logo">
             </a> |
-            <a href="https://www.kaggle.com/" target="_blank">
-                <i class="fa-brands fa-kaggle"></i> Kaggle
+            
+            <a href="https://www.kaggle.com/sofianechehboune/" target="_blank">
+                <img src="{{ url_for('static', filename='images/kaggle.png') }}" alt="Kaggle" class="logo">
             </a> |
-            <a href="https://www.upwork.com/freelancers/~0107eb9f01faeb1d82" target="_blank">
-                <i class="fa-brands fa-upwork"></i> Upwork
+            
+            <a href="https://www.upwork.com/freelancers/~0107eb9f01faeb1d82" target="blank">
+                <img src="{{ url_for('static', filename='images/upwork.png') }}" alt="Upwork" class="logo">
+            </a> |
+            
+            <a href="https://bsky.app/profile/sofianepython.bsky.social" target="blank">
+                <img src="{{ url_for('static', filename='images/bluesky.png') }}" alt="Bluesky" class="logo">
             </a>
+                             
         </p>
     </footer>
 </body>
